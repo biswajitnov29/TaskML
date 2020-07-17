@@ -1,0 +1,8 @@
+{
+  "name": "TaskML",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
