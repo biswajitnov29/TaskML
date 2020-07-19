@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Add Company</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismissModal()">Close</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+    <ion-item>
+        <ion-label position="stacked">Company name</ion-label>
+        <ion-input [(ngModel)]="company.name" placeholder="Company Name" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contact person</ion-label>
+        <ion-input [(ngModel)]="company.contactPerson" placeholder="company contact name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contact Email</ion-label>
+        <ion-input [(ngModel)]="company.contactEmail" placeholder="company contact email"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="addCompany()">Add Company Info</ion-button>
+    </ion-content>
