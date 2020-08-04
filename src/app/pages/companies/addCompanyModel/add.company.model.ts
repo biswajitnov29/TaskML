@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Company, DatabaseService } from 'src/app/services/database.service';
-import { ToastController } from '@ionic/angular';
+import { DatabaseService } from 'src/app/services/database.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -20,7 +19,7 @@ export class AddCompanyModel implements OnInit {
     contactEmail: new FormControl('')
   });
 
-  constructor(private db: DatabaseService,public toastController: ToastController) { }
+  constructor(private db: DatabaseService) { }
 
   ngOnInit() {
   }

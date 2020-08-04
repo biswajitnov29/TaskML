@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Add Task</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="dismissModal()">Close</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+    <ion-item>
+        <ion-label position="stacked">Task name</ion-label>
+        <ion-input [(ngModel)]="task.name" placeholder="Task Name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Company</ion-label>
+        <ion-select [(ngModel)]="task.company" placeholder="Company name">
+            <ion-select-option value={{company.id}} *ngFor="let company of companies">{{company.name}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Date</ion-label>
+        <ion-datetime [(ngModel)]="task.date" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Time</ion-label>
+        <ion-datetime [(ngModel)]="task.time" display-format="h:mm A" picker-format="h:mm A" placeholder="Select Time"></ion-datetime>
+    </ion-item>
+    <ion-button expand="block" (click)="addTask()">Add Task Info</ion-button>
+</ion-content>

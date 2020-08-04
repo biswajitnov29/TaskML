@@ -10,7 +10,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content padding>
+  <!-- <ion-segment [(ngModel)]="selectedView">
+    <ion-segment-button value="devs">
+      <ion-label>Developer</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="products">
+      <ion-label>Products</ion-label>
+    </ion-segment-button>
+  </ion-segment> -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="openAddCompanyModel()">
       <ion-icon name="add"></ion-icon>

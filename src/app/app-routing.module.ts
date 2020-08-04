@@ -8,18 +8,19 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'companies',
+    loadChildren: './pages/companies/companies.module#CompaniesPageModule'//() => import('./pages/companies/companies.module').then( m => m.CompaniesPageModule)
   },
   {
-    path: 'companies',
-    loadChildren: () => import('./pages/companies/companies.module').then( m => m.CompaniesPageModule)
+    path: 'tasks',
+    loadChildren: './pages/tasks/tasks.module#TasksPageModule'//() => import('./pages/tasks/tasks.module').then( m => m.TasksPageModule)
   }
+
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
